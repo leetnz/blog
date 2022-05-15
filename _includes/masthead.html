@@ -1,0 +1,83 @@
+{% capture logo_path %}{{ site.logo }}{% endcapture %}
+
+<div class="masthead navbar">
+    <ul class="navbar-nav">
+        <li class="logo">
+            <a href="#" class="nav-link">
+                <svg width="3.2em" height="3.2em" viewBox="0 0 752.99964 753.00019" version="1.1" id="leetware-logo">
+                    <defs id="defs2">
+                        <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop style="stop-color:#e6f8ff;stop-opacity:1;" offset="0" />
+                            <stop style="stop-color:#f8caff;stop-opacity:1" offset="1" />
+                        </linearGradient>
+                    </defs>
+                    <g transform="translate(378.17449,118.44903)">
+                        <g id="g4821" transform="matrix(11.487455,0,0,11.487455,-1656.2688,-976.08242)">
+                            <path id="leetwarelogopath" style="fill:url(#logoGradient);fill-opacity:1;"
+                                d="M 1422.1914 5.6699219 A 1417.3225 1417.3225 0 0 0 5.6699219 1422.9922 A 1417.3225 1417.3225 0 0 0 1422.9922 2840.3164 A 1417.3225 1417.3225 0 0 0 2840.3145 1422.9922 A 1417.3225 1417.3225 0 0 0 1422.9922 5.6699219 A 1417.3225 1417.3225 0 0 0 1422.1914 5.6699219 z M 1431.6387 186 A 1228.3462 1228.3462 0 0 1 2659.9844 1414.3477 A 1228.3462 1228.3462 0 0 1 1431.6387 2642.6934 A 1228.3462 1228.3462 0 0 1 203.29102 1414.3477 A 1228.3462 1228.3462 0 0 1 1431.6387 186 z M 1337.1504 379.28125 A 1039.3697 1039.3697 0 0 0 396.57227 1319.8594 L 586.50977 1319.8594 L 1337.1504 1319.8594 L 1337.1504 1130.8828 L 629.87891 1130.8828 A 850.39344 850.39344 0 0 1 1337.1504 569.21875 L 1337.1504 379.28125 z M 1526.127 379.28125 L 1526.127 569.2207 A 850.39344 850.39344 0 0 1 1966.1406 752.92969 L 1526.127 752.92969 L 1526.127 941.90625 L 2138.7207 941.90625 A 850.39344 850.39344 0 0 1 2233.3965 1130.8828 L 1526.127 1130.8828 L 1526.127 1319.8594 L 2276.7637 1319.8594 L 2466.7031 1319.8594 A 1039.3697 1039.3697 0 0 0 1526.127 379.28125 z M 396.57227 1508.834 A 1039.3697 1039.3697 0 0 0 1337.1504 2449.4121 L 1337.1504 2259.4746 A 850.39344 850.39344 0 0 1 897.13281 2075.7637 L 1337.1504 2075.7637 L 1337.1504 1886.7871 L 724.55469 1886.7871 A 850.39344 850.39344 0 0 1 629.87891 1697.8125 L 1337.1504 1697.8125 L 1337.1504 1508.834 L 586.50977 1508.834 L 396.57227 1508.834 z M 1526.127 1508.834 L 1526.127 1697.8125 L 2233.3965 1697.8125 A 850.39344 850.39344 0 0 1 1526.127 2259.4746 L 1526.127 2449.4121 A 1039.3697 1039.3697 0 0 0 2466.7031 1508.834 L 2276.7637 1508.834 L 1526.127 1508.834 z "
+                                transform="matrix(0.02303237,0,0,0.02303237,111.26001,74.658259)" />
+                        </g>
+                    </g>
+                </svg>
+                <span class="link-text logo-text">{{ site.masthead_title | default: site.title }}</span>
+            </a>
+        </li>
+
+        {%- for link in site.data.navigation.main -%}
+        <li class="nav-item">
+            <a href="{{ link.url | relative_url }}" class="nav-link" {% if link.description %}
+                title="{{ link.description }}" {% endif %}>
+                <span class="link-text">{{ link.title }}</span>
+            </a>
+        </li>
+        {%- endfor -%}
+
+        {% if site.search == true %}
+        <button class="search__toggle" type="button">
+            <span class="visually-hidden">{{ site.data.ui-text[site.locale].search_label | default: "Toggle
+                search" }}</span>
+            <i class="fas fa-search"></i>
+        </button>
+        {% endif %}
+        <button class="greedy-nav__toggle hidden" type="button">
+            <span class="visually-hidden">{{ site.data.ui-text[site.locale].menu_label | default: "Toggle menu"
+                }}</span>
+            <div class="navicon"></div>
+        </button>
+    </ul>
+    <!-- <div class="masthead__inner-wrap">
+        <div class="masthead__menu">
+            <nav id="site-nav" class="greedy-nav">
+                {% unless logo_path == empty %}
+                <a class="site-logo" href="{{ '/' | relative_url }}"><img src="{{ logo_path | relative_url }}"
+                        alt="{{ site.masthead_title | default: site.title }}"></a>
+                {% endunless %}
+                <a class="site-title" href="{{ '/' | relative_url }}">
+                    {{ site.masthead_title | default: site.title }}
+                    {% if site.subtitle %}<span class="site-subtitle">{{ site.subtitle }}</span>{% endif %}
+                </a>
+                <ul class="visible-links">
+                    {%- for link in site.data.navigation.main -%}
+                    <li class="masthead__menu-item">
+                        <a href="{{ link.url | relative_url }}" {% if link.description %} title="{{ link.description }}"
+                            {% endif %}>{{ link.title }}</a>
+                    </li>
+                    {%- endfor -%}
+                </ul>
+                {% if site.search == true %}
+                <button class="search__toggle" type="button">
+                    <span class="visually-hidden">{{ site.data.ui-text[site.locale].search_label | default: "Toggle
+                        search" }}</span>
+                    <i class="fas fa-search"></i>
+                </button>
+                {% endif %}
+                <button class="greedy-nav__toggle hidden" type="button">
+                    <span class="visually-hidden">{{ site.data.ui-text[site.locale].menu_label | default: "Toggle menu"
+                        }}</span>
+                    <div class="navicon"></div>
+                </button>
+                <ul class="hidden-links hidden"></ul>
+            </nav>
+        </div>
+    </div> -->
+</div>
