@@ -1,5 +1,6 @@
 ---
 title: "Go Generics"
+last_modified_at: 2022-06-26T19:44:00-12:00
 excerpt: "Generics Overview for Golang"
 permalink: software/golang/generics
 toc: true
