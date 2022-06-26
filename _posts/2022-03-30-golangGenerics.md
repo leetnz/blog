@@ -7,7 +7,6 @@ toc: true
 categories:
   - guide
   - golang
-  - golang-guide
 ---
 
 {% include video id="Eor1w37tVNw" provider="youtube" %}
