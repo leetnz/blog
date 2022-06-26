@@ -1,7 +1,9 @@
 main:
-  - title: "Posts"
-    url: /posts/
-  - title: "Categories"
-    url: /categories/
-  - title: "Tags"
-    url: /tags/
+  - title: "Services"
+    url: https://www.leetware.co.nz#services
+  - title: "About"
+    url: https://www.leetware.co.nz#about
+  - title: "Contact"
+    url: https://www.leetware.co.nz#contact
+  - title: "Blog"
+    url: https://www.leetware.co.nz/blog

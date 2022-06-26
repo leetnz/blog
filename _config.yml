@@ -23,7 +23,7 @@ description: >- # this means to ignore newlines until "baseurl:"
 # twitter_username: username
 github_username: leetnz
 minimal_mistakes_skin: dark
-search: true
+search: false
 repository: leetnz/blog
 
 # Build settings
@@ -62,26 +62,23 @@ plugins:
   - jekyll-include-cache
 
 author:
-  name   : "First Lastname"
-  avatar : "/assets/images/bio-photo.jpg"
-  bio    : "My awesome biography constrained to a sentence or two goes here."
-  # links:
-  #   - label: "Website"
-  #     icon: "fas fa-fw fa-link"
-  #     url: "https://leetware.co.nz/"
-  #   - label: "LinkedIn"
-  #     icon: "fab fa-fw fa-linkedin"
-  #     url: "https://twitter.com/"
-  #   - label: "GitHub"
-  #     icon: "fab fa-fw fa-github"
-  #     url: "https://github.com/leetnz"
-  #   - label: "LinkedIn"
-  #     icon: "fab fa-fw fa-youtube"
-  #     url: "https://www.youtube.com/channel/UC_hv2IPy6vSLAJkJnOSsOrw"
+  name   : "Hoani Bryson"
+  avatar : "/assets/images/hoani-bio.jpg"
+  bio    : "Hoani Bryson is an alumini from the University of Canterbury, Christchurch, New Zealand, where he received his masters in engineering with distinction for his work on rocket control systems. <br>His career has spanned from avionics design for bleeding edge rocketry systems to systems software on distributed computing."
+  links:
+    - label: "hoani.net"
+      icon: "fas fa-fw fa-link"
+      url: "https://www.hoani.net/"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "www.linkedin.com/in/hoanibryson"
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/hoani"
 
 footer:
   links:
-    - label: "Website"
+    - label: "Home"
       icon: "fas fa-fw fa-link"
       url: "https://leetware.co.nz/"
     - label: "LinkedIn"
