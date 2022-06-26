@@ -64,7 +64,7 @@ plugins:
 author:
   name   : "Hoani Bryson"
   avatar : "/assets/images/hoani-bio.jpg"
-  bio    : "Hoani Bryson is an alumini from the University of Canterbury, Christchurch, New Zealand, where he received his masters in engineering with distinction for his work on rocket control systems. <br>His career has spanned from avionics design for bleeding edge rocketry systems to systems software on distributed computing."
+  bio    : "Hoani Bryson is an alumni from UoC, Christchurch, New Zealand, where he received his masters in engineering with distinction for his work on rocket control systems. <br>His career has spanned from avionics design for bleeding edge rocketry systems to systems software on distributed computing."
   links:
     - label: "hoani.net"
       icon: "fas fa-fw fa-link"
